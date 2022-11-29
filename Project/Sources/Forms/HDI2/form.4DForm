@@ -1,0 +1,1251 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload",
+		"onTimer",
+		"onBeginDragOver",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 28,
+					"left": 18,
+					"width": 1020,
+					"height": 800,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Trace": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 798,
+					"left": 29,
+					"width": 117,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingY": "move",
+					"dataSourceTypeHint": "boolean"
+				},
+				"ViewProArea": {
+					"type": "view",
+					"left": 29,
+					"top": 385,
+					"width": 985,
+					"height": 396,
+					"userInterface": "none",
+					"withFormulaBar": false,
+					"method": "ObjectMethods/ViewProArea.4dm",
+					"events": [
+						"onVPReady"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "input",
+					"top": 66,
+					"left": 31,
+					"width": 986,
+					"height": 688,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 284,
+					"left": 31,
+					"width": 984,
+					"height": 91
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 185,
+					"left": 30,
+					"width": 984,
+					"height": 91
+				},
+				"information2": {
+					"type": "input",
+					"top": 66,
+					"left": 31,
+					"width": 986,
+					"height": 80,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FontColor1": {
+					"type": "button",
+					"top": 242,
+					"left": 194,
+					"width": 28,
+					"height": 28,
+					"tooltip": "Text color",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/TextColor.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontColor1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontList1": {
+					"type": "dropdown",
+					"top": 214,
+					"left": 49,
+					"width": 115,
+					"height": 27,
+					"dataSource": "FontList",
+					"focusable": false,
+					"fontFamily": "System Font Regular",
+					"fontSize": 11,
+					"method": "ObjectMethods/FontList1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FontBold1": {
+					"type": "checkbox",
+					"top": 242,
+					"left": 49,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style1.fontObj.bold",
+					"tooltip": "Bold",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Bold.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontBold1.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": "",
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontItalic1": {
+					"type": "checkbox",
+					"top": 242,
+					"left": 78,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style1.fontObj.italic",
+					"tooltip": "Italic",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Italic.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontItalic1.4dm",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontUnderline1": {
+					"type": "checkbox",
+					"top": 242,
+					"left": 107,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style1.fontObj.underline",
+					"tooltip": "Underline",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Underline.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontUnderline1.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": "",
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontSizes1": {
+					"type": "dropdown",
+					"top": 214,
+					"left": 165,
+					"width": 57,
+					"height": 27,
+					"dataSource": "FontSizes",
+					"tooltip": "Size",
+					"focusable": false,
+					"method": "ObjectMethods/FontSizes1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TopLine1": {
+					"type": "line",
+					"top": 214,
+					"left": 251,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"BottomLine1": {
+					"type": "line",
+					"top": 264,
+					"left": 251,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"LeftLine1": {
+					"type": "line",
+					"top": 219,
+					"left": 246,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"RightLine1": {
+					"type": "line",
+					"top": 219,
+					"left": 398,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"BackgroundColor1": {
+					"type": "rectangle",
+					"top": 219,
+					"left": 251,
+					"width": 144,
+					"height": 42,
+					"stroke": "transparent",
+					"fill": "#4b0082"
+				},
+				"TopLinebt1": {
+					"type": "button",
+					"text": "",
+					"top": 204,
+					"left": 255,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/TopLinebt1.4dm"
+				},
+				"BottomLinebt1": {
+					"type": "button",
+					"text": "",
+					"top": 262,
+					"left": 255,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/BottomLinebt1.4dm"
+				},
+				"RightLinebt1": {
+					"type": "button",
+					"text": "",
+					"top": 217,
+					"left": 397,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/RightLinebt1.4dm"
+				},
+				"LeftLinebt1": {
+					"type": "button",
+					"text": "",
+					"top": 218,
+					"left": 239,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/LeftLinebt1.4dm"
+				},
+				"CellStyle1": {
+					"type": "button",
+					"text": "Text sample",
+					"top": 218,
+					"left": 251,
+					"width": 144,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/CellStyle1.4dm",
+					"borderStyle": "none",
+					"stroke": "#ffff00",
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"textDecoration": "none"
+				},
+				"FontColor2": {
+					"type": "button",
+					"top": 241,
+					"left": 789,
+					"width": 28,
+					"height": 28,
+					"tooltip": "Text color",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/TextColor.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontColor2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontList2": {
+					"type": "dropdown",
+					"top": 213,
+					"left": 644,
+					"width": 115,
+					"height": 27,
+					"dataSource": "FontList2",
+					"focusable": false,
+					"fontFamily": "System Font Regular",
+					"fontSize": 11,
+					"method": "ObjectMethods/FontList2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FontBold2": {
+					"type": "checkbox",
+					"top": 241,
+					"left": 644,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style2.fontObj.bold",
+					"tooltip": "Bold",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Bold.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontBold2.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": ""
+				},
+				"FontItalic2": {
+					"type": "checkbox",
+					"top": 241,
+					"left": 673,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style2.fontObj.italic",
+					"tooltip": "Italic",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Italic.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontItalic2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontUnderline2": {
+					"type": "checkbox",
+					"top": 241,
+					"left": 702,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style2.fontObj.underline",
+					"tooltip": "Underline",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Underline.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontUnderline2.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": ""
+				},
+				"FontSizes2": {
+					"type": "dropdown",
+					"top": 213,
+					"left": 760,
+					"width": 57,
+					"height": 27,
+					"dataSource": "FontSizes2",
+					"tooltip": "Size",
+					"focusable": false,
+					"method": "ObjectMethods/FontSizes2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TopLine2": {
+					"type": "line",
+					"top": 214,
+					"left": 848,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"BottomLine2": {
+					"type": "line",
+					"top": 264,
+					"left": 848,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"LeftLine2": {
+					"type": "line",
+					"top": 219,
+					"left": 843,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"RightLine2": {
+					"type": "line",
+					"top": 219,
+					"left": 995,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"BackgroundColor2": {
+					"type": "rectangle",
+					"top": 219,
+					"left": 848,
+					"width": 144,
+					"height": 42,
+					"stroke": "transparent",
+					"fill": "#800080"
+				},
+				"TopLinebt2": {
+					"type": "button",
+					"text": "",
+					"top": 203,
+					"left": 852,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/TopLinebt2.4dm"
+				},
+				"BottomLinebt2": {
+					"type": "button",
+					"text": "",
+					"top": 263,
+					"left": 852,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/BottomLinebt2.4dm"
+				},
+				"RightLinebt2": {
+					"type": "button",
+					"text": "",
+					"top": 217,
+					"left": 992,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/RightLinebt2.4dm"
+				},
+				"LeftLinebt2": {
+					"type": "button",
+					"text": "",
+					"top": 218,
+					"left": 836,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/LeftLinebt2.4dm"
+				},
+				"CellStyle2": {
+					"type": "button",
+					"text": "Text sample",
+					"top": 219,
+					"left": 848,
+					"width": 144,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/CellStyle2.4dm",
+					"borderStyle": "none",
+					"stroke": "#98fb98",
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"textDecoration": "none"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Band Columns",
+					"top": 220,
+					"left": 465,
+					"width": 137,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.bandColumns",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box.4dm"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Band Rows",
+					"top": 318,
+					"left": 464,
+					"width": 137,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.bandRows",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/Check Box1.4dm"
+				},
+				"strip1": {
+					"type": "checkbox",
+					"text": "First Column Strip",
+					"top": 192,
+					"left": 47,
+					"width": 168,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.firstColumnStrip",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/strip1.4dm"
+				},
+				"strip2": {
+					"type": "checkbox",
+					"text": "Second Column Strip",
+					"top": 192,
+					"left": 644,
+					"width": 168,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.secondColumnStrip",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/strip2.4dm"
+				},
+				"FontColor3": {
+					"type": "button",
+					"top": 341,
+					"left": 194,
+					"width": 28,
+					"height": 28,
+					"tooltip": "Text color",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/TextColor.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontColor3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontList3": {
+					"type": "dropdown",
+					"top": 313,
+					"left": 49,
+					"width": 115,
+					"height": 27,
+					"dataSource": "FontList3",
+					"focusable": false,
+					"fontFamily": "System Font Regular",
+					"fontSize": 11,
+					"method": "ObjectMethods/FontList3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FontBold3": {
+					"type": "checkbox",
+					"top": 341,
+					"left": 49,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style3.fontObj.bold",
+					"tooltip": "Bold",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Bold.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontBold3.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": "",
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontItalic3": {
+					"type": "checkbox",
+					"top": 341,
+					"left": 78,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style3.fontObj.italic",
+					"tooltip": "Italic",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Italic.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontItalic3.4dm",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontUnderline3": {
+					"type": "checkbox",
+					"top": 341,
+					"left": 107,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style3.fontObj.underline",
+					"tooltip": "Underline",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Underline.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontUnderline3.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": "",
+					"dataSourceTypeHint": "boolean"
+				},
+				"FontSizes3": {
+					"type": "dropdown",
+					"top": 313,
+					"left": 165,
+					"width": 57,
+					"height": 27,
+					"dataSource": "FontSizes3",
+					"tooltip": "Size",
+					"focusable": false,
+					"method": "ObjectMethods/FontSizes3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TopLine3": {
+					"type": "line",
+					"top": 313,
+					"left": 251,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"BottomLine3": {
+					"type": "line",
+					"top": 363,
+					"left": 251,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"LeftLine3": {
+					"type": "line",
+					"top": 318,
+					"left": 246,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"RightLine3": {
+					"type": "line",
+					"top": 318,
+					"left": 398,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"BackgroundColor3": {
+					"type": "rectangle",
+					"top": 318,
+					"left": 251,
+					"width": 144,
+					"height": 42,
+					"stroke": "transparent",
+					"fill": "#4b0082"
+				},
+				"TopLinebt3": {
+					"type": "button",
+					"text": "",
+					"top": 303,
+					"left": 255,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/TopLinebt3.4dm"
+				},
+				"BottomLinebt3": {
+					"type": "button",
+					"text": "",
+					"top": 361,
+					"left": 255,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/BottomLinebt3.4dm"
+				},
+				"RightLinebt3": {
+					"type": "button",
+					"text": "",
+					"top": 316,
+					"left": 395,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/RightLinebt3.4dm"
+				},
+				"LeftLinebt3": {
+					"type": "button",
+					"text": "",
+					"top": 317,
+					"left": 240,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/LeftLinebt3.4dm"
+				},
+				"CellStyle3": {
+					"type": "button",
+					"text": "Text sample",
+					"top": 317,
+					"left": 251,
+					"width": 144,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/CellStyle3.4dm",
+					"borderStyle": "none",
+					"stroke": "#ffff00",
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"textDecoration": "none"
+				},
+				"strip3": {
+					"type": "checkbox",
+					"text": "First Row Strip",
+					"top": 291,
+					"left": 47,
+					"width": 168,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.firstRowStrip",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/strip3.4dm"
+				},
+				"FontColor4": {
+					"type": "button",
+					"top": 340,
+					"left": 789,
+					"width": 28,
+					"height": 28,
+					"tooltip": "Text color",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/TextColor.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontColor4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontList4": {
+					"type": "dropdown",
+					"top": 311,
+					"left": 645,
+					"width": 115,
+					"height": 27,
+					"dataSource": "FontList4",
+					"focusable": false,
+					"fontFamily": "System Font Regular",
+					"fontSize": 11,
+					"method": "ObjectMethods/FontList4.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FontBold4": {
+					"type": "checkbox",
+					"top": 339,
+					"left": 645,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style4.fontObj.bold",
+					"tooltip": "Bold",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Bold.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontBold4.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": ""
+				},
+				"FontItalic4": {
+					"type": "checkbox",
+					"top": 339,
+					"left": 674,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style4.fontObj.italic",
+					"tooltip": "Italic",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Italic.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontItalic4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"FontUnderline4": {
+					"type": "checkbox",
+					"top": 339,
+					"left": 703,
+					"width": 28,
+					"height": 28,
+					"dataSource": "Form:C1466.style4.fontObj.underline",
+					"tooltip": "Underline",
+					"icon": "/RESOURCES/Images/Toolbar1/Home/Underline.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "toolbar",
+					"method": "ObjectMethods/FontUnderline4.4dm",
+					"events": [
+						"onClick"
+					],
+					"text": ""
+				},
+				"FontSizes4": {
+					"type": "dropdown",
+					"top": 311,
+					"left": 761,
+					"width": 57,
+					"height": 27,
+					"dataSource": "FontSizes4",
+					"tooltip": "Size",
+					"focusable": false,
+					"method": "ObjectMethods/FontSizes4.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TopLine4": {
+					"type": "line",
+					"top": 313,
+					"left": 848,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"BottomLine4": {
+					"type": "line",
+					"top": 363,
+					"left": 848,
+					"width": 144,
+					"height": 2,
+					"strokeWidth": 2
+				},
+				"LeftLine4": {
+					"type": "line",
+					"top": 318,
+					"left": 843,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"RightLine4": {
+					"type": "line",
+					"top": 318,
+					"left": 995,
+					"width": 2,
+					"height": 42,
+					"strokeWidth": 2
+				},
+				"BackgroundColor4": {
+					"type": "rectangle",
+					"top": 318,
+					"left": 848,
+					"width": 144,
+					"height": 42,
+					"stroke": "transparent",
+					"fill": "#800080"
+				},
+				"TopLinebt4": {
+					"type": "button",
+					"text": "",
+					"top": 302,
+					"left": 852,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/TopLinebt4.4dm"
+				},
+				"BottomLinebt4": {
+					"type": "button",
+					"text": "",
+					"top": 362,
+					"left": 852,
+					"width": 137,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/BottomLinebt4.4dm"
+				},
+				"RightLinebt4": {
+					"type": "button",
+					"text": "",
+					"top": 316,
+					"left": 992,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/RightLinebt4.4dm"
+				},
+				"LeftLinebt4": {
+					"type": "button",
+					"text": "",
+					"top": 317,
+					"left": 836,
+					"width": 11,
+					"height": 44,
+					"events": [
+						"onClick"
+					],
+					"style": "circular",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/LeftLinebt4.4dm"
+				},
+				"CellStyle4": {
+					"type": "button",
+					"text": "Text sample",
+					"top": 318,
+					"left": 848,
+					"width": 144,
+					"height": 42,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"display": true,
+					"defaultButton": false,
+					"method": "ObjectMethods/CellStyle4.4dm",
+					"borderStyle": "none",
+					"stroke": "#98fb98",
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"textDecoration": "none"
+				},
+				"strip4": {
+					"type": "checkbox",
+					"text": "Second Row Strip",
+					"top": 289,
+					"left": 644,
+					"width": 168,
+					"height": 15,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.secondRowStrip",
+					"dataSourceTypeHint": "boolean",
+					"method": "ObjectMethods/strip4.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Column strip",
+					"top": 144,
+					"left": 30,
+					"width": 128,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm",
+					"dataSource": "Band"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Row strip",
+					"top": 144,
+					"left": 315,
+					"width": 128,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm",
+					"dataSource": "Band"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Whole strip",
+					"top": 144,
+					"left": 600,
+					"width": 128,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm",
+					"dataSource": "Band"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Mix strip",
+					"top": 144,
+					"left": 886,
+					"width": 128,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"dataSource": "Band"
+				},
+				"Input": {
+					"type": "input",
+					"left": 342,
+					"top": 192,
+					"width": 53,
+					"height": 16,
+					"method": "ObjectMethods/Input.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.firstColumnStripSize"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Strip size:",
+					"top": 192,
+					"left": 239,
+					"width": 97,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 944,
+					"top": 192,
+					"width": 53,
+					"height": 16,
+					"method": "ObjectMethods/Input1.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.secondColumnStripSize"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Strip size:",
+					"top": 192,
+					"left": 841,
+					"width": 97,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 347,
+					"top": 291,
+					"width": 53,
+					"height": 16,
+					"method": "ObjectMethods/Input2.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.firstRowStripSize"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Strip size:",
+					"top": 291,
+					"left": 244,
+					"width": 97,
+					"height": 15,
+					"textAlign": "right"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 944,
+					"top": 291,
+					"width": 53,
+					"height": 16,
+					"method": "ObjectMethods/Input3.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.secondRowStripSize"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Strip size:",
+					"top": 291,
+					"left": 841,
+					"width": 97,
+					"height": 15,
+					"textAlign": "right"
+				}
+			}
+		}
+	],
+	"geometryStamp": 5729,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"width": 1039,
+	"height": 829
+}

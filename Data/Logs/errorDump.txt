@@ -1,0 +1,38 @@
+﻿Erreur lors de l’exécution de la méthode "InitFont" à la ligne 34
+
+Objet ou collection attendu(e).
+
+Error code: -10716 (4DRT)
+Objet ou collection attendu(e).
+component: '4DRT'
+task -1, name: 'Process principal'
+ VDBLanguageContext::Execute
+ VDBLanguageContext_modeinterp::DoExecute
+ VDBLanguageContext_interpreted::DoExecute
+ cct_interpreted
+ calcul
+ calculLink::Execute
+ explore
+ syntax
+
+Call chain:
+[
+	{
+		"type": "projectMethod",
+		"name": "InitFont",
+		"line": 34,
+		"database": "HDI_4DVP_tableStyle"
+	},
+	{
+		"type": "projectMethod",
+		"name": "Init",
+		"line": 6,
+		"database": "HDI_4DVP_tableStyle"
+	},
+	{
+		"type": "formMethod",
+		"name": "HDI2",
+		"line": 7,
+		"database": "HDI_4DVP_tableStyle"
+	}
+]

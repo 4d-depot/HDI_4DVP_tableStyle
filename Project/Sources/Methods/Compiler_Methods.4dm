@@ -1,0 +1,11 @@
+//%attributes = {"invisible":true}
+C_LONGINT:C283(00_Start; $1)
+C_OBJECT:C1216(UpdateTheme; $0)
+C_TEXT:C284(ConvertDecToHex; $0)
+C_LONGINT:C283(ConvertDecToHex; $1)
+C_TEXT:C284(DisplayCellStyle; $1)
+C_OBJECT:C1216(DisplayCellStyle; $2)
+C_TEXT:C284(EnableStyle; $1)
+C_BOOLEAN:C305(EnableStyle; $2)
+C_BOOLEAN:C305(EnableStyle; $3)
+C_BOOLEAN:C305(InitVisibleObjects; $1)
